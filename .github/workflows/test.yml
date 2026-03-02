@@ -1,8 +1,9 @@
-workflow_dispatch:
-  inputs:
-    ZIGVER:
-      description: "zig version to target"
-      required: true
+on:
+  workflow_dispatch:
+    inputs:
+      ZIGVER:
+        description: "zig version to target"
+        required: true
 
 jobs:
   do_the_thing:
