@@ -13,6 +13,7 @@ jobs:
       - uses: mlugg/setup-zig@v2
         with:
           version: ${{ inputs.ZIGVER }}
-      - run: zig init
-      - run: zig build
-      - run: zig build run
+          use_cache: false
+      - run: timeout 20s zig init
+      - run: timeout 20s zig build
+      - run: timeout 20s zig build run
