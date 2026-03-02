@@ -5,7 +5,7 @@ on:
         description: "zig version to target"
         required: true
 
-run-name: {{ inputs.ZIGVER }}
+run-name: '${{ inputs.ZIGVER }}'
 jobs:
   do_the_thing:
     runs-on: ubuntu-latest
