@@ -1,0 +1,16 @@
+workflow_dispatch:
+  inputs:
+    ZIGVER:
+      description: "zig version to target"
+      required: true
+
+jobs:
+  do_the_thing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: https://codeberg.org/mlugg/setup-zig@v2
+        with:
+          version: ${{ inputs.ZIGVER }}
+      - run: zig init
+      - run: zig build
+      - run: zig build run
