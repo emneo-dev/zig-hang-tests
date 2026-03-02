@@ -9,7 +9,7 @@ jobs:
   do_the_thing:
     runs-on: ubuntu-latest
     steps:
-      - uses: https://codeberg.org/mlugg/setup-zig@v2
+      - uses: mlugg/setup-zig@v2
         with:
           version: ${{ inputs.ZIGVER }}
       - run: zig init
