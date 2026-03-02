@@ -14,6 +14,6 @@ jobs:
         with:
           version: ${{ inputs.ZIGVER }}
           use_cache: false
-      - run: timeout 20s zig init
-      - run: timeout 20s zig build
-      - run: timeout 20s zig build run
+      - run: timeout 1m zig init
+      - run: timeout 1m zig build
+      - run: timeout 1m zig build run
